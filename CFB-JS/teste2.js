@@ -19,16 +19,6 @@ console.log(soma(2))
 ///////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////
-// function fatorial(n){
-//     let fat = 1
-//     for(let c = n; c > 1; c--){
-//         fat *= c 
-//     }
-//     return fat
-// }
-
-// console.log(fatorial(5))
-
 
 function fatorial(n){
     let fat = 1
@@ -38,3 +28,14 @@ function fatorial(n){
     return fat
 }
 console.log(fatorial(5))
+/////////////////////////////////////////////
+/*----------OBJETOS-------------*/
+
+let amigo = {nome:'Gabriel',
+sexo:'M',
+peso:80,
+engordar(p=0){
+    this.peso += p
+}}
+amigo.engordar(5)
+console.log(`O ${amigo.nome} pesa ${amigo.peso}Kg`)
