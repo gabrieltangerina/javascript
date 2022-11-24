@@ -1,11 +1,19 @@
 @charset "UTF-8";
 
+:root{
+    --cor1:#330659;
+    --cor2:#9E53DF;
+    --cor3:#7B0FD9;
+    --cor4:#4D3C5C;
+    --cor5:#5E0CA6;
+}
+
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body{
-    background-color: rgb(27, 27, 102);
+    background-color: #330659;
 }
 
 header{
@@ -17,7 +25,7 @@ section{
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    max-width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
 }
@@ -26,5 +34,17 @@ footer{
     color: white;
     text-align: center;
     font-style: italic;
+    margin: auto;
 }
 
+#res > #foto{
+    display: block;
+    margin: auto;
+}
+
+#sobre{
+    /*background-color: aquamarine;*/
+    padding:10px;
+    border-radius: 10px;
+    text-align: justify;
+}
