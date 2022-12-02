@@ -1,0 +1,24 @@
+.curso{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid #888;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.curso:hover{
+    border-color: rgb(4, 0, 255);
+}
+
+.c1{
+    background-color: #ccc;
+    color: #444;
+}
+
+.c2{
+    background-color: #444;
+    color: #ccc;
+}
