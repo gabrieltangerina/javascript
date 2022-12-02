@@ -15,34 +15,38 @@ A DIFERANÇA ENTRE O .MAP E O FOR EACH
 
 
 
-let frutas = ['laranja' , 'maça', 'pera']
+let frutas = ['laranja' , 'maça', 'pera', 'uva', 'melão', 'pera']
 
-let novoArray = frutas.map((valorAtual, indice, array) =>{
-    console.log(valorAtual, indice, array)
-    // return valorAtual
+let novoArray = frutas.map((novoArray, indice, array)=>{
+    console.log(novoArray)
 })
 
-let numeros = [ 1, 3, 5]
+// let novoArray = frutas.map((valorAtual, indice, array) =>{
+//     console.log(valorAtual, indice, array)
+//     // return valorAtual
+// })
 
-let novoNumeros = numeros.map((valorAtual, indice, array) => {
-    return valorAtual * 3 
-})
+// let numeros = [ 1, 3, 5]
 
-console.log(numeros)
-console.log(novoNumeros)
+// let novoNumeros = numeros.map((valorAtual, indice, array) => {
+//     return valorAtual * 3 
+// })
 
-let carros = [
-    {
-        nome : 'Ferrari',
-        valor: 100
-    },
-    {
-        nome : 'Gol',
-        valor : 200
-    }
-];
+// console.log(numeros)
+// console.log(novoNumeros)
 
-let nomeCarros = carros.map((novoArray, indice, array) =>{
-    console.log(novoArray.nome)
-})
+// let carros = [
+//     {
+//         nome : 'Ferrari',
+//         valor: 100
+//     },
+//     {
+//         nome : 'Gol',
+//         valor : 200
+//     }
+// ];
+
+// let nomeCarros = carros.map((novoArray, indice, array) =>{
+//     console.log(novoArray.nome)
+// })
 
