@@ -24,13 +24,13 @@ button{
 
 .curso{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     width: 200px;
     border: 4px solid #888;
     border-radius: 10px;
     padding: 10px;
     margin: 5px 0px;
-    cursor: pointer;
 }
 
 .c1{
@@ -62,3 +62,20 @@ button{
     border-color:#f00 !important;
 }
 
+.lixeira{
+    height: 30px;
+    width: 25px;
+    border-radius: 5px;
+    background-color:white;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.button{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    background-color:#444;
+    cursor: pointer;
+    margin-left: 30px;
+}
