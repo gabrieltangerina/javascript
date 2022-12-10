@@ -11,8 +11,9 @@ buttonAdd.addEventListener("click", ()=>{
     // newElement.innerHTML="ESSA MERDA!"
 
     const newElementContent=document.createElement("p")
-    const textContent=inputText.value
-    console.log(textContent)
+    newElementContent.innerHTML="MERDA"
+    // const textContent=inputText.value
+    // console.log(textContent)
     // newElementContent.innerText=textContent
 
     // const textInput = inputText.textContent
