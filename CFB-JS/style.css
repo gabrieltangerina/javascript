@@ -1,0 +1,34 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxContainer{
+    border: solid black 2px;
+    width: 150px;
+    height: 100px;
+    margin: 50px;
+
+}
+
+#boxAdd{
+    text-align: center;
+}
+
+#boxAdd button{
+    margin-top: 25px;
+}
+
+.element{
+    text-align: center;
+    background-color: thistle;
+    margin: 10px 10px 15px 10px;
+    border-radius: 7px;
+}
