@@ -1,12 +1,24 @@
 const buttonAdd=document.querySelector("#btnAddElement")
 const boxElement=document.querySelector("#boxElement")
+const inputText=document.querySelector("inputText")
 
 
-indice = 0
 buttonAdd.addEventListener("click", ()=>{
+
     const newElement=document.createElement("div")
-    newElement.setAttribute("id", "c" + (indice+1))
     newElement.setAttribute("class", "element")
-    newElement.innerHTML="TESTE"
+
+    // newElement.innerHTML="ESSA MERDA!"
+
+    const newElementContent=document.createElement("p")
+    const textContent=inputText.value
+    console.log(textContent)
+    // newElementContent.innerText=textContent
+
+    // const textInput = inputText.textContent
+    // // newElementContent.innerText=text
+    // console.log(textInput)
+
+    newElement.appendChild(newElementContent)
     boxElement.appendChild(newElement)
 })

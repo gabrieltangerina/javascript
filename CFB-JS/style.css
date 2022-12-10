@@ -5,13 +5,14 @@
 }
 
 #container{
-    border: solid black 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* border: solid black 2px; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .boxContainer{
+    border: red solid 2px;
     width: 150px;
     height: 100px;
     margin: 50px;
@@ -19,9 +20,17 @@
 
 #boxAdd{
     position: fixed;
+    width: 220px;
+    left: 10px;
+}
+
+#inputText{
+    margin-top: 10px;
 }
 
 #boxElement{
+    position: fixed;
+    right: 10px;
     height: auto;
 }
 
