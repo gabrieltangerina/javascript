@@ -5,17 +5,24 @@
 }
 
 #container{
+    border: solid black 2px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .boxContainer{
-    border: solid black 2px;
     width: 150px;
     height: 100px;
     margin: 50px;
+}
 
+#boxAdd{
+    position: fixed;
+}
+
+#boxElement{
+    height: auto;
 }
 
 #boxAdd{

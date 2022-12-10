@@ -1,11 +1,12 @@
-boxAddElement=document.querySelector("boxAdd")
-btnAddElement=document.getElementById("#btnAddElement")
+const buttonAdd=document.querySelector("#btnAddElement")
+const boxElement=document.querySelector("#boxElement")
 
-btnAddElement.addEventListener("click", ()=>{
-    console.log("deu certo")
+
+indice = 0
+buttonAdd.addEventListener("click", ()=>{
+    const newElement=document.createElement("div")
+    newElement.setAttribute("id", "c" + (indice+1))
+    newElement.setAttribute("class", "element")
+    newElement.innerHTML="TESTE"
+    boxElement.appendChild(newElement)
 })
-
-boxAddElement.addEventListener("click", ()=>{
-    console.log("deu certo aqui")
-})
-
