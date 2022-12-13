@@ -9,6 +9,8 @@ Operadores lógicos
 // const expressaoOr = false || true || false || false;
 // console.log(expressaoAnd);
 
+
+
 const usuario = "Gabriel";
 const senha = "12345";
 
@@ -17,4 +19,13 @@ const vaiLogar = usuario && senha !== "";
 console.log(vaiLogar);
 
 console.log(!true);
+
+console.log("Gabriel" && "Tangerina");
+
+
+// const numero = 10;
+
+// if(numero >= 0){
+//     console.log("Sim, o número é maior ou igual a zero");
+// }
 
