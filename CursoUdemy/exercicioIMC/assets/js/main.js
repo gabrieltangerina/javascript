@@ -55,7 +55,7 @@ function setResultado (msg, isValid){
     if(isValid) {
         paragrafo.classList.add("paragrafoResultadoTrue");
     }else{
-        paragrafo.classList.add("paragrafoResultadoFalse")
+        paragrafo.classList.add("paragrafoResultadoFalse");
     }
 
     paragrafo.innerHTML = msg;
