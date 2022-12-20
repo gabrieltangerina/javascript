@@ -1,4 +1,5 @@
 const relogio = document.querySelector(".relogio")
+
 let seconds = 0;
 
 const timerToSeconds = (seconds) => {
@@ -19,7 +20,7 @@ document.addEventListener("click", (e)=>{
 
     if(el.classList.contains("iniciar")){
         clearInterval(timer);
-        relogio.classList.remove("pausado")
+        relogio.classList.remove("pausado");
         startTimer(timer);
     }
 
