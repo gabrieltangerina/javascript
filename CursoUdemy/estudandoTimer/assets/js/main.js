@@ -1,14 +1,14 @@
 const relogio = document.querySelector(".relogio")
 
-let seconds = 0;
 
 const timerToSeconds = (seconds) => {
     const date = new Date(seconds * 1000);
     return date.toLocaleTimeString('pt-br', {timeZone: "GMT"})
 }
 
+let seconds = 0;
 let timer;
-const startTimer = () =>{
+const iniciaRelogio = () =>{
     timer = setInterval(()=>{
         seconds++
         relogio.innerHTML = timerToSeconds(seconds);
@@ -21,7 +21,7 @@ document.addEventListener("click", (e)=>{
     if(el.classList.contains("iniciar")){
         clearInterval(timer);
         relogio.classList.remove("pausado");
-        startTimer(timer);
+        iniciaRelogio(timer);
     }
 
     if(el.classList.contains("pausar")){
