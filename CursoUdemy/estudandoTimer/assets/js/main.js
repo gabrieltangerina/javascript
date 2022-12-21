@@ -1,17 +1,16 @@
-const relogio = document.querySelector(".relogio")
-
-
-const timerToSeconds = (seconds) => {
-    const date = new Date(seconds * 1000);
-    return date.toLocaleTimeString('pt-br', {timeZone: "GMT"})
-}
+const relogio = document.querySelector(".timer");
 
 let seconds = 0;
+const createTimer = (seconds)=>{
+    const date = new Date(seconds * 1000);
+    return date.toLocaleTimeString("pt-br", {timeZone: "GMT"});
+}
+
 let timer;
-const iniciaRelogio = () =>{
+const startTimer = () =>{
     timer = setInterval(()=>{
-        seconds++
-        relogio.innerHTML = timerToSeconds(seconds);
+        seconds++;
+        relogio.innerHTML = createTimer(seconds);
     }, 1000)
 }
 
@@ -20,27 +19,20 @@ document.addEventListener("click", (e)=>{
 
     if(el.classList.contains("iniciar")){
         clearInterval(timer);
+        startTimer(timer);
         relogio.classList.remove("pausado");
-        iniciaRelogio(timer);
     }
 
     if(el.classList.contains("pausar")){
         clearInterval(timer);
         if(seconds !== 0){
-            relogio.classList.add("pausado")
+            relogio.classList.add("pausado");
         }
     }
 
     if(el.classList.contains("zerar")){
         clearInterval(timer);
-        relogio.classList.remove("pausado")
-        seconds = 0
-        relogio.innerHTML = "00:00:00"; 
+        relogio.innerHTML = "00:00:00";
+        relogio.classList.remove("pausado");
     }
 })
-
-/*
-OBSERVAÇÕES:
-
--Lembrar que no "clearInterval()" deve ter o timer entre parênteses. "clearInterval(timer)." Pois está se referindo ao setInterval.
-*/
