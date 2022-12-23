@@ -1,3 +1,7 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body{
     background-color: tomato;
 }
@@ -11,7 +15,11 @@ body{
     margin: 0 auto;
 }
 
-.timer{
+#titulo{
+    font-size: 30px;
+}
+
+h1{
     font-size: 3em;
 }
 

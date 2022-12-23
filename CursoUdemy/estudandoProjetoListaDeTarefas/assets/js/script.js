@@ -40,8 +40,19 @@ let salvarElementos = () =>{
     }
 
     const tarefasJSON = JSON.stringify(listaDeTarefas);
-    console.log(tarefasJSON);
+    localStorage.setItem('tarefas', tarefasJSON);
 }
+
+let adicionaTarefasSalvas = () =>{
+    const tarefas = localStorage.getItem('tarefas');
+    const listaDeTarefas = JSON.parse(tarefas);
+
+    for (let tarefa of listaDeTarefas){
+        criarTarefa(tarefa);
+    }
+}
+
+adicionaTarefasSalvas();
 
 inputTexto.addEventListener("keypress", (e)=>{
     if(e.keyCode === 13){
@@ -61,5 +72,6 @@ document.addEventListener("click", (e)=>{
 
     if(el.classList.contains("apagar")){
         el.parentElement.remove();
+        salvarElementos();
     }
 })
