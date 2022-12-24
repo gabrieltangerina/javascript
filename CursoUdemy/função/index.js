@@ -13,13 +13,13 @@ const raizFuncaoAnonima = function (n){
 
 console.log(raiz(9))
 
-// //Arrow function
 
+// //Arrow function
 const raizArrowFunction = (n)=>{
 
 }
 
-//Arrow function reduzida
 
+//Arrow function reduzida
 const raizArrowFunctionReduzida = n => n ** 0.5
 console.log(raizArrowFunctionReduzida(25)) 
