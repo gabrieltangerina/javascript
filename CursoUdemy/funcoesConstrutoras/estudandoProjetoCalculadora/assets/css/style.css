@@ -1,0 +1,42 @@
+.root{
+    --cor1: #563799;
+    --roxoClaro: #A378FF;
+    --roxoAzulado: #8355E6;
+}
+
+body{
+    background-color: #563799;
+}
+
+.container{
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.display{
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 1.6em;
+    border: none;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #A378FF;
+    transition: 0.19s;
+}
+
+.btn-eq{
+    background-color: #563799;
+}
+
