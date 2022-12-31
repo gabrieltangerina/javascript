@@ -40,3 +40,9 @@ body{
     background-color: #563799;
 }
 
+input{
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
