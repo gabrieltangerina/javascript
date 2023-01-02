@@ -1,5 +1,3 @@
-// Falar sobre o método slice no caderno;
-
 function criaFuncao(){
 
     return{
