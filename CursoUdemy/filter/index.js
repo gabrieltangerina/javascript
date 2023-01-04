@@ -27,3 +27,6 @@ console.log(idadeMaior50);
 
 const nomeTerminaComA = pessoas.filter( el => el.nome.toLowerCase().endsWith('a'));
 console.log(nomeTerminaComA);
+
+// Os spreads não é uma solução
+// Quando dou um console.log() em algum filter, o resultado fica: [{…}, {…}] e não mostra os resultados
