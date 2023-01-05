@@ -14,16 +14,26 @@ const pessoas = [
 
 // Pegando os nomes dos elementos do onjeto
 const nomes = pessoas.map((el) => el.nome);
-console.log(nomes);
+// console.log(nomes);
 
 // Pegando as idades dos elementos do onjeto
 const idades = pessoas.map (el => `idade: ${el.idade}`)
-console.log(idades);
+// console.log(idades);
 
-// Adicionando uma chave id em cada elemento
+// Adicionando uma chave id em cada elemento, no array original
 const criandoId = pessoas.map((el, indice)=>{
     el.id = indice + 1;
     return el;
 })
+// console.log(criandoId);
 
-console.log(criandoId);
+// Adicionando uma chave id em um array idêntico ao original, mas não é
+const comIds = pessoas.map((el, indice)=>{
+    const newObj = {...el};
+    newObj.id = indice + 1;
+    return newObj;
+})
+console.log(comIds);
+
+
+// Anotar sobre as partes do objeto, como por exemplo os atributos.
