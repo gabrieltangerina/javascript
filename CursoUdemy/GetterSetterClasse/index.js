@@ -31,4 +31,5 @@ for(let i = 0; i <=150; i++){
 c1.velocidade = 2000;
 console.log(c1);
 
-// Ver videos sobre o GETTER e SETTER.
+// Ver vídeos sobre o GETTER e SETTER.
+// Ver vídeos sobre o dado primitivo Symbol;
