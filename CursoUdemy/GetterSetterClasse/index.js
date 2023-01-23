@@ -29,7 +29,25 @@ for(let i = 0; i <=150; i++){
 }
 
 c1.velocidade = 2000;
-console.log(c1);
+// console.log(c1);
 
 // Ver vídeos sobre o GETTER e SETTER.
 // Ver vídeos sobre o dado primitivo Symbol;
+
+class Pessoa{
+    constructor(nome, sobrenome){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
+
+    set nomeCompleto(valor){
+        valor = valor.split(' ');
+        this.nome = valor.shift();
+        this.sobrenome = valor.join(' ');
+    }
+}
+
+const p1 = new Pessoa();
+p1.nomeCompleto = 'Gabriel Tangerina Gonzalez';
+console.log(p1.nome);
+console.log(p1.sobrenome);
