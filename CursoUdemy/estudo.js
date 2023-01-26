@@ -29,7 +29,7 @@ class ValidaFormulario{
 
         if(senha.value !== repetirSenha.value){
             valid = false;
-            this.criaErro(senha, 'Campos senha e repetir senha precisam ser iguais');
+            this.criaErro(senha, 'Campos senha e repetir senha precisam ser iguais'); // Porque quando é trocado o parâmetro do campo não troca nada na localização do erro. Resposta: É trocado sim, na verdade, o erro nao é nem adicionado. Mas se você tentar enviar com as senhas diferentes não irá conseguir e não irá aparecer nenhuma mensagem.   
             this.criaErro(repetirSenha, 'Campos senha e repetir senha precisam ser iguais');
         }
 
@@ -101,15 +101,17 @@ class ValidaFormulario{
         const div = document.createElement('div');
         div.innerText = msg
         div.classList.add('error-text');
-        campo.insertAdjacentElement('afterend', div);
+        campo.insertAdjacentElement('afterend', div); // Informa onde o erro vai ser adicionado. O primeiro argumento do método criaErro precisa ser um elemento e o erro será adicionado depois desse elemento. 
     }
 }
 
 const valida = new ValidaFormulario();
 
-// Pesquisar para que serve o método match()
-
 
 // Campo -> é o input. 
 // p -> pega o irmão anterior do campo
 // Na linha 34, chama-se a função que retorna um resultado. Se o resultado for false, ou seja, o cpf seja inválido, com o operador de negação o if fica true e assim o que está dentro do if é feito.
+
+// Está sendo usado a flag "valid = " pois se fosse um return a função ia parar.
+
+// 48713334506
