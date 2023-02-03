@@ -1,50 +1,79 @@
-// Esse é um exemplo de AJAX com Promises
+// // Esse é um exemplo de AJAX com Promises
 
-const request = (obj) =>{
-    return new Promise((resolve, reject) =>{
-        const xhr = new XMLHttpRequest();
-        xhr.open(obj.method, obj.url, true); // Aqui vai receber um method (método) e uma url
-        xhr.send();
+// const request = (obj) =>{
+//     return new Promise((resolve, reject) =>{
+//         const xhr = new XMLHttpRequest();
+//         xhr.open(obj.method, obj.url, true); // Aqui vai receber um method (método) e uma url
+//         xhr.send();
     
-        xhr.addEventListener('load', ()=>{
-            if(xhr.status >= 200 && xhr.status < 300) {
-                resolve(xhr.responseText);
-            }else{
-                reject(xhr.statusText);
-            }
-        });
-    })
-};
+//         xhr.addEventListener('load', ()=>{
+//             if(xhr.status >= 200 && xhr.status < 300) {
+//                 resolve(xhr.responseText);
+//             }else{
+//                 reject(xhr.statusText);
+//             }
+//         });
+//     })
+// };
 
-document.addEventListener('click', (e) =>{
+// document.addEventListener('click', (e) =>{
+//     const el = e.target;
+//     const tag = el.tagName.toLowerCase(); // Pegando o nome da tag de qlqr elemento que for clicado e convertendo ela para lowerCase
+
+//     if(tag === 'a'){
+//         e.preventDefault();
+//         carregaPagina(el);
+//     }
+// });
+
+// async function carregaPagina(el){
+//     const href = el.getAttribute('href');
+
+//     // const objConfig = {
+//     //     method: 'GET',
+//     //     url: href
+//     // }
+//     try{
+//         const response = await request({
+//             method: 'GET',
+//             url: href
+//         })                                  // Aqui está enviando o method e a url
+//         carregaResultado(response);
+//     } catch(e){
+//         console.log(e);
+//     }
+// }
+
+// function carregaResultado(response){
+//     const resultado = document.querySelector('.resultado');
+//     resultado.innerHTML = response;
+// }
+
+document.addEventListener('click', e =>{
     const el = e.target;
-    const tag = el.tagName.toLowerCase(); // Pegando o nome da tag de qlqr elemento que for clicado e convertendo ela para lowerCase
+    const tag = el.tagName.toLowerCase();
 
-    if(tag === 'a'){
+    if (tag === 'a'){
         e.preventDefault();
         carregaPagina(el);
     }
-});
+})
 
 async function carregaPagina(el){
-    const href = el.getAttribute('href');
-
-    // const objConfig = {
-    //     method: 'GET',
-    //     url: href
-    // }
     try{
-        const response = await request({
-            method: 'GET',
-            url: href
-        })                                  // Aqui está enviando o method e a url
-        carregaResultado(response);
+        const href = el.getAttribute('href');
+        const response = await fetch(href);
+
+        if(response.status !== 200) throw new Error('ERRO 404!');
+
+        const html = await response.text();
+        carregaResultado(html);
     } catch(e){
         console.log(e);
     }
 }
 
-function carregaResultado(response){
+function carregaResultado(response) {
     const resultado = document.querySelector('.resultado');
     resultado.innerHTML = response;
 }
