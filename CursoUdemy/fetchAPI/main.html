@@ -9,12 +9,11 @@
 </head>
 <body>
     <section class="container">
-        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+        <h1>Escolha uma página</h1>
 
-        <a href="pagina1.html" class="classePagina1">Página 1</a>
+        <a href="pagina1.html" class="classePagina1">Pagina 1</a>
         <a href="pagina2.html" class="classePagina2">Página 2</a>
         <a href="pagina3.html" class="classePagina3">Página 3</a>
-        <a href="">Teste</a>
 
         <div class="resultado"></div>
     </section>
@@ -22,3 +21,33 @@
     <script src="index.js"></script>
 </body>
 </html></html>
+
+<!-- document.addEventListener('click', e =>{
+        const el = e.target;
+        const tag = el.tagName.toLowerCase();
+
+        if(tag === 'a'){
+            e.preventDefault();
+            carregaPagina(el);
+        }
+})
+
+async function carregaPagina(el){
+    try{
+        const href = el.getAttribute('href'); // Pega a URL que será carregada 
+        const response = await fetch(href); // Carrega o link. Pega os dados da URL 
+
+        if(response.status !== 200) throw new Error('ERRO 404!');
+
+        const html = await response.text(); // Convertendo o dado do fetch em texto
+        carregaResultado(html); 
+    } catch(e){
+        console.log('Ocorreu um erro', e);
+    }
+}
+
+// Essa função pega a div com a classe resultado e adiciona nela o texto da URL que pegamos com o fetch.
+function carregaResultado(response) {
+    const resultado = document.querySelector('.resultado');
+    resultado.innerHTML = response;
+} -->
