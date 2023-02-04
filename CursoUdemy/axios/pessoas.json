@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "Gabriel",
+        "email": "gabriel@gmail.com",
+        "estado": "SP",
+        "idade": 17,
+        "sexo": "M"
+    },
+    {
+        "nome": "Rafael",
+        "email": "rafael@gmail.com",
+        "estado": "SP",
+        "idade": 24,
+        "sexo": "M"
+    },
+    {
+        "nome": "Erika",
+        "email": "erika@gmail.com",
+        "estado": "SP",
+        "idade": 47,
+        "sexo": "F"
+    },
+    {
+        "nome": "Cesar",
+        "email": "cesar@gmail.com",
+        "estado": "SP",
+        "idade": 52,
+        "sexo": "M"
+    }
+]

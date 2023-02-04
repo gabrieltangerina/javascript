@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo axios</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            background-color: thistle;
+            padding: 20px;
+            max-width: 300px;
+            margin:0 auto;
+        }
+
+        .container > h1{
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        table{
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>Pessoas</h1>
+        <a href="pessoas.json" class="abrir">Mostrar</a>
+        <a href="" class="fechar">Fechar</a>
+
+        <div class="resultado"></div>
+    </section>
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="teste.js"></script>
+</body>
+</html>
