@@ -1,6 +1,6 @@
-// fetch('pessoas.json')
-//     .then(resposta => resposta.json())
-//     .then(json => carregaElementosNaPagina(json));
+fetch('pessoas.json')
+    .then(resposta => resposta.json())
+    .then(json => carregaElementosNaPagina(json));
 
 axios('pessoas.json')
   .then(respota => carregaElementosNaPagina(respota.data));// <-- Aqui precisar ser data
