@@ -1,13 +1,4 @@
-export const nome = "Adam";
-export const sobrenome = "Sandler";
+const nome = "Gabriel";
+const sobrenome = "Tangerina";
 
-function falaNome(nome, sobrenome){
-    return nome + ' ' + sobrenome;
-};
-
-export default class Pessoa{
-    constructor(nome, sobrenome){
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-    }
-};
+export{ nome as default, sobrenome };
