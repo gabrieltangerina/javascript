@@ -1,0 +1,11 @@
+body{
+    background-color: azure;
+}
+
+h1{
+    background-color: cadetblue;
+    padding: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
