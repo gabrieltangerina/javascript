@@ -9,7 +9,45 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ GeraCPF)
+/* harmony export */ });
 /* harmony import */ var _ValidaCPF__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ValidaCPF */ "./src/modules/ValidaCPF.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var GeraCPF = /*#__PURE__*/function () {
+  function GeraCPF() {
+    _classCallCheck(this, GeraCPF);
+  }
+  _createClass(GeraCPF, [{
+    key: "rand",
+    value: function rand() {
+      var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100000000;
+      var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 999999999;
+      return String(Math.floor(Math.random() * (max - min) + min));
+    }
+  }, {
+    key: "formatado",
+    value: function formatado(cpf) {
+      return cpf.slice(0, 3) + '.' + cpf.slice(3, 6) + '.' + cpf.slice(6, 9) + '-' + cpf.slice(9, 11);
+    }
+  }, {
+    key: "geraNovoCpf",
+    value: function geraNovoCpf() {
+      var cpfSemDigito = this.rand();
+      var digito1 = _ValidaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito);
+      var digito2 = _ValidaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito + digito1);
+      var novoCPF = cpfSemDigito + digito1 + digito2;
+      return this.formatado(novoCPF);
+    }
+  }]);
+  return GeraCPF;
+}();
 
 
 /***/ }),
@@ -66,7 +104,9 @@ var ValidaCPF = /*#__PURE__*/function () {
       var digito2 = this.geraDigito(cpfSemDigito + digito1);
       this.novoCPF = cpfSemDigito + digito1 + digito2;
     }
-  }, {
+
+    // O que este static faz?
+  }], [{
     key: "geraDigito",
     value: function geraDigito(cpfSemDigito) {
       var total = 0;
@@ -91,7 +131,6 @@ var ValidaCPF = /*#__PURE__*/function () {
   return ValidaCPF;
 }();
 
-console.log('Cheguei aqui.');
 
 /***/ }),
 
@@ -114,7 +153,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background-color: azure;\r\n}\r\n\r\nh1{\r\n    background-color: cadetblue;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,2BAA2B;IAC3B,aAAa;IACb,gBAAgB;IAChB,cAAc;IACd,kBAAkB;AACtB","sourcesContent":["body{\r\n    background-color: azure;\r\n}\r\n\r\nh1{\r\n    background-color: cadetblue;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background-color: #6EA4F0;\r\n}\r\n\r\n.container{\r\n    background-color: #4B70A3;\r\n    text-align: center;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\n.cpf-gerado{\r\n    color: white;\r\n    font-size: 40px;\r\n}\r\n\r\nh1{\r\n    color: white;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;IACzB,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB","sourcesContent":["body{\r\n    background-color: #6EA4F0;\r\n}\r\n\r\n.container{\r\n    background-color: #4B70A3;\r\n    text-align: center;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\n.cpf-gerado{\r\n    color: white;\r\n    font-size: 40px;\r\n}\r\n\r\nh1{\r\n    color: white;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -684,6 +723,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 
 
+(function () {
+  var gera = new _modules_GeraCPF__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  var cpfGerado = document.querySelector('.cpf-gerado');
+  cpfGerado.innerHTML = gera.geraNovoCpf();
+})();
 })();
 
 /******/ })()

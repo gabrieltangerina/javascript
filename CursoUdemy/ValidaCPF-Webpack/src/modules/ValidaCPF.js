@@ -29,7 +29,8 @@ export default class ValidaCPF{
         this.novoCPF = cpfSemDigito + digito1 + digito2;
     }
 
-    geraDigito(cpfSemDigito){
+    // O que este static faz?
+    static geraDigito(cpfSemDigito){
         let total = 0;
         let regressivo = cpfSemDigito.length + 1;
 
@@ -42,5 +43,3 @@ export default class ValidaCPF{
         return digito <= 9 ? String(digito) : '0';
     }
 }
-
-console.log('Cheguei aqui.');

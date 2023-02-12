@@ -1,11 +1,21 @@
 body{
-    background-color: azure;
+    background-color: #6EA4F0;
 }
 
-h1{
-    background-color: cadetblue;
+.container{
+    background-color: #4B70A3;
+    text-align: center;
     padding: 15px;
     max-width: 300px;
     margin: 0 auto;
     border-radius: 8px;
+}
+
+.cpf-gerado{
+    color: white;
+    font-size: 40px;
+}
+
+h1{
+    color: white;
 }
