@@ -29,8 +29,9 @@ var GeraCPF = /*#__PURE__*/function () {
     value: function rand() {
       var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100000000;
       var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 999999999;
+      // Sem os dois últimos números
       return String(Math.floor(Math.random() * (max - min) + min));
-    }
+    } // floor: retorna o menor número inteiro
   }, {
     key: "formatado",
     value: function formatado(cpf) {
@@ -39,9 +40,11 @@ var GeraCPF = /*#__PURE__*/function () {
   }, {
     key: "geraNovoCpf",
     value: function geraNovoCpf() {
-      var cpfSemDigito = this.rand();
+      var cpfSemDigito = this.rand(); // Pega os primeiros 9 números
       var digito1 = _ValidaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito);
-      var digito2 = _ValidaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito + digito1);
+      // Static -> Por "geraDigito" ser um método "static" ele é chamado assim, primeiro vem a classe e depois o método.
+      //O que faz? Chama a classe que foi importada com o nome "ValidaCPF" e usa a função geraDigito dela com os 9 primeiros números do cpf
+      var digito2 = _ValidaCPF__WEBPACK_IMPORTED_MODULE_0__["default"].geraDigito(cpfSemDigito + digito1); // Faz a mesma coisa que a anterior, porém adiciona o dígito1.
       var novoCPF = cpfSemDigito + digito1 + digito2;
       return this.formatado(novoCPF);
     }
@@ -153,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background-color: #6EA4F0;\r\n}\r\n\r\n.container{\r\n    background-color: #4B70A3;\r\n    text-align: center;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\n.cpf-gerado{\r\n    color: white;\r\n    font-size: 40px;\r\n}\r\n\r\nh1{\r\n    color: white;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;IACzB,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB","sourcesContent":["body{\r\n    background-color: #6EA4F0;\r\n}\r\n\r\n.container{\r\n    background-color: #4B70A3;\r\n    text-align: center;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\n.cpf-gerado{\r\n    color: white;\r\n    font-size: 40px;\r\n}\r\n\r\nh1{\r\n    color: white;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background-color: #6EA4F0;\r\n}\r\n\r\n.container{\r\n    background-color: #4B70A3;\r\n    text-align: center;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\n.cpf-gerado{\r\n    color: white;\r\n    font-size: 40px;\r\n    font-weight: bold;\r\n}\r\n\r\nh1{\r\n    color: white;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;IACzB,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,iBAAiB;AACrB;;AAEA;IACI,YAAY;AAChB","sourcesContent":["body{\r\n    background-color: #6EA4F0;\r\n}\r\n\r\n.container{\r\n    background-color: #4B70A3;\r\n    text-align: center;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\n.cpf-gerado{\r\n    color: white;\r\n    font-size: 40px;\r\n    font-weight: bold;\r\n}\r\n\r\nh1{\r\n    color: white;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
