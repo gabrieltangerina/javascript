@@ -8,3 +8,10 @@ import './assets/css/style.css';
     cpfGerado.innerHTML = gera.geraNovoCpf();
 })();
 
+class AprendendoStatic{
+    static meuNome(){
+        return "Gabriel";
+    }
+}
+
+console.log(AprendendoStatic.meuNome());
