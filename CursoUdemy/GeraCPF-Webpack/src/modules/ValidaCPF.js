@@ -29,14 +29,13 @@ export default class ValidaCPF{
         this.novoCPF = cpfSemDigito + digito1 + digito2;
     }
 
-    // O que este static faz?
     static geraDigito(cpfSemDigito){
         let total = 0;
         let regressivo = cpfSemDigito.length + 1;
 
         for(let valores of cpfSemDigito){
             total += regressivo * Number(valores);
-            regressivo--
+            regressivo--;
         }
 
         const digito = 11 - (total % 11);

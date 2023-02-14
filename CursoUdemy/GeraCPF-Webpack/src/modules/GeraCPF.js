@@ -2,8 +2,8 @@ import ValidaCPF from "./ValidaCPF";
 
 export default class GeraCPF{
     rand(min = 100000000, max = 999999999){ // Sem os dois últimos números
-        return String(Math.floor(Math.random() * (max - min) + min));
-    } // floor: retorna o menor número inteiro
+        const digitos = String(Math.floor(Math.random() * (max - min) + min));
+    } 
 
     formatado(cpf){
         return (
@@ -12,7 +12,7 @@ export default class GeraCPF{
             cpf.slice(6, 9) + '-' +
             cpf.slice(9, 11)
         );
-    }
+    };
 
     geraNovoCpf(){
         const cpfSemDigito = this.rand(); // Pega os primeiros 9 números

@@ -7,11 +7,3 @@ import './assets/css/style.css';
     const cpfGerado = document.querySelector('.cpf-gerado');
     cpfGerado.innerHTML = gera.geraNovoCpf();
 })();
-
-class AprendendoStatic{
-    static meuNome(){
-        return "Gabriel";
-    }
-}
-
-console.log(AprendendoStatic.meuNome());
