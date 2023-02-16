@@ -23,9 +23,13 @@ var chkSimbolos = document.querySelector('.chk-simbolos');
 var gerarSenha = document.querySelector('.gerar-senha');
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   gerarSenha.addEventListener('click', function () {
-    console.log(chkMaiusculas);
+    senhaGerada.innerHTML = gera();
   });
 });
+function gera() {
+  var senha = (0,_geradores__WEBPACK_IMPORTED_MODULE_0__["default"])(qtdCaracteres.value, chkMaiusculas.checked, chkMinusculas.checked, chkNumeros.checked, chkSimbolos.checked);
+  return senha || 'Nada selecionado';
+}
 
 /***/ }),
 
@@ -88,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background-color: azure;\r\n}\r\n\r\n.container{\r\n    background-color: cadetblue;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n    border-bottom: 1px solid black;\r\n}\r\n\r\n.senha-gerada{\r\n    font-size: 2em;\r\n}\r\n\r\nbutton{\r\n    font-size: 1em;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,2BAA2B;IAC3B,aAAa;IACb,gBAAgB;IAChB,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,8BAA8B;AAClC;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,cAAc;AAClB","sourcesContent":["body{\r\n    background-color: azure;\r\n}\r\n\r\n.container{\r\n    background-color: cadetblue;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n    border-bottom: 1px solid black;\r\n}\r\n\r\n.senha-gerada{\r\n    font-size: 2em;\r\n}\r\n\r\nbutton{\r\n    font-size: 1em;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background-color: azure;\r\n}\r\n\r\n.container{\r\n    background-color: cadetblue;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n    border-bottom: 1px solid black;\r\n}\r\n\r\n.senha-gerada{\r\n    font-size: 2em;\r\n    text-align: center;\r\n    font-weight: bolder;\r\n}\r\n\r\nbutton{\r\n    font-size: 1em;\r\n}", "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,uBAAuB;AAC3B;;AAEA;IACI,2BAA2B;IAC3B,aAAa;IACb,gBAAgB;IAChB,cAAc;IACd,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,8BAA8B;AAClC;;AAEA;IACI,cAAc;IACd,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;IACI,cAAc;AAClB","sourcesContent":["body{\r\n    background-color: azure;\r\n}\r\n\r\n.container{\r\n    background-color: cadetblue;\r\n    padding: 15px;\r\n    max-width: 300px;\r\n    margin: 0 auto;\r\n    border-radius: 8px;\r\n}\r\n\r\nh1{\r\n    text-align: center;\r\n    border-bottom: 1px solid black;\r\n}\r\n\r\n.senha-gerada{\r\n    font-size: 2em;\r\n    text-align: center;\r\n    font-weight: bolder;\r\n}\r\n\r\nbutton{\r\n    font-size: 1em;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

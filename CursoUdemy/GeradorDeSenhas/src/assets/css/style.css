@@ -17,6 +17,8 @@ h1{
 
 .senha-gerada{
     font-size: 2em;
+    text-align: center;
+    font-weight: bolder;
 }
 
 button{

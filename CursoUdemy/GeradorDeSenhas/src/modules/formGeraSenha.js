@@ -10,6 +10,18 @@ const gerarSenha = document.querySelector('.gerar-senha');
 
 export default () => {
     gerarSenha.addEventListener('click', () => {
-        console.log(chkMaiusculas);
-    })
+        senhaGerada.innerHTML = gera();
+})
 };
+
+function gera() {
+    const senha = geraSenha(
+        qtdCaracteres.value,
+        chkMaiusculas.checked,
+        chkMinusculas.checked,
+        chkNumeros.checked,
+        chkSimbolos.checked
+    );
+
+    return senha || 'Nada selecionado';
+}
