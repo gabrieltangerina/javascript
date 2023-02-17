@@ -1,12 +1,12 @@
 import geraSenha from './geradores';
 
-const senhaGerada = document.querySelector('.senha-gerada');
+const senhaGerada = document.querySelector('.senha-gerada');  // "Div" do resultado
 const qtdCaracteres = document.querySelector('.qtd-caracteres');
 const chkMaiusculas = document.querySelector('.chk-maiusculas');
 const chkMinusculas = document.querySelector('.chk-minusculas');
 const chkNumeros = document.querySelector('.chk-numeros');
 const chkSimbolos = document.querySelector('.chk-simbolos');
-const gerarSenha = document.querySelector('.gerar-senha');
+const gerarSenha = document.querySelector('.gerar-senha'); // Botão
 
 export default () => {
     gerarSenha.addEventListener('click', () => {
